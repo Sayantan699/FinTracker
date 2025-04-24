@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinTrackr - Crypto Portfolio Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">FINTRACKR</div>
+    <ul class="nav-links">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Insights</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Login 🔍</a></li>
+    </ul>
+  </header>
+
+  <section class="hero">
+    <h1>Track. Grow. Master your <span>Crypto Portfolio.</span></h1>
+    <button class="cta-btn">Start Tracking Free</button>
+    <div class="features">
+      <div>📈 Live Portfolio Tracking</div>
+      <div>📃 Real-time P&L Reports</div>
+      <div>🔄 Auto Sync from Wallets</div>
+      <div>🔐 Secure & Private</div>
+    </div>
+  </section>
+
+  <section class="add-asset">
+    <h2>Add Asset</h2>
+    <form id="assetForm">
+      <select name="crypto" required>
+        <option value="">Select Crypto</option>
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+        <option value="ENB">ENB</option>
+        <option value="XRP">XRP</option>
+        <option value="ADA">ADA</option>
+      </select>
+      <input type="number" name="price" placeholder="Purchase Price (USD)" required />
+      <input type="number" name="amount" placeholder="Amount Purchased" required />
+      <input type="date" name="date" required />
+      <button type="submit">Add Asset</button>
+    </form>
+  </section>
+
+  <section class="asset-list">
+    <h2>Asset List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Amount</th>
+          <th>Cost (USD)</th>
+          <th>Current Price</th>
+          <th>Current Value</th>
+          <th>P/L (%)</th>
+        </tr>
+      </thead>
+      <tbody id="assetTable">
+        <!-- Filled by JS -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

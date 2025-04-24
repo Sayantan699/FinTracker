@@ -1,0 +1,132 @@
+/* FinTrackr Website Styles */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b0c2a;
+  color: #fff;
+}
+
+header {
+  padding: 1rem 2rem;
+  background: #101234;
+  border-bottom: 1px solid #2a2d55;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a78bfa;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+
+.nav-links li a {
+  color: #e0e0ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.4;
+}
+
+.hero h1 span {
+  color: #7f5eff;
+}
+
+.cta-btn {
+  background: linear-gradient(to right, #7f5eff, #9f7aea);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.features {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  color: #90cdf4;
+}
+
+section {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  background: #131639;
+  border-radius: 10px;
+}
+
+.add-asset form,
+.asset-list table {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.add-asset input,
+.add-asset select,
+.add-asset button {
+  padding: 0.8rem;
+  flex: 1;
+  border-radius: 5px;
+  border: none;
+}
+
+.add-asset button {
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+}
+
+.asset-list table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.asset-list th, .asset-list td {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid #2a2d55;
+}
+
+.asset-list th {
+  color: #a0aec0;
+}
+
+.asset-list td {
+  color: #e2e8f0;
+}
+
+.asset-list td:last-child {
+  font-weight: bold;
+}
+
+.asset-list td.positive {
+  color: #68d391;
+}
+
+.asset-list td.negative {
+  color: #fc8181;
+}
