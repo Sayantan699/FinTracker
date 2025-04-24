@@ -298,7 +298,7 @@ footer {
   min-width: 250px;
 }
 
-.footer-actions {
+.footer-buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -306,7 +306,7 @@ footer {
   justify-content: center;
 }
 
-.footer-actions button {
+.footer-buttons button {
   background: linear-gradient(to right, #8f44fd, #7f5eff);
   color: white;
   border: none;
@@ -317,7 +317,7 @@ footer {
   transition: 0.2s ease;
 }
 
-.footer-actions button:hover {
+.footer-buttons button:hover {
   opacity: 0.85;
 }
 
@@ -337,3 +337,4 @@ footer {
   color: #ffffff;
   margin-bottom: 0.5rem;
 }
+
