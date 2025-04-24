@@ -1,4 +1,4 @@
-/* FinTrackr Website Styles */
+/* FinTrackr Website Styles - Extended */
 
 body {
   margin: 0;
@@ -11,6 +11,9 @@ header {
   padding: 1rem 2rem;
   background: #101234;
   border-bottom: 1px solid #2a2d55;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -25,7 +28,6 @@ header {
   list-style: none;
   padding: 0;
   margin: 0;
-  float: right;
 }
 
 .nav-links li a {
@@ -36,42 +38,64 @@ header {
 
 .hero {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem 3rem;
+  background: linear-gradient(to right, #0b0c2a 0%, #161848 100%);
+  border-bottom: 2px solid #1f1f4a;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  line-height: 1.4;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
 }
 
 .hero h1 span {
-  color: #7f5eff;
+  color: #8a68f1;
 }
 
 .cta-btn {
-  background: linear-gradient(to right, #7f5eff, #9f7aea);
+  background: linear-gradient(to right, #9a70ff, #b38aff);
   color: white;
-  padding: 0.8rem 1.8rem;
+  padding: 0.9rem 2rem;
   border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  margin-top: 1.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 4px 15px rgba(138, 104, 241, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(138, 104, 241, 0.5);
 }
 
 .features {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
-  color: #90cdf4;
+}
+
+.features div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1e1e4a;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  color: #c3dafe;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0 0 5px rgba(50, 50, 100, 0.2);
 }
 
 section {
   padding: 2rem;
   margin: 2rem auto;
-  max-width: 900px;
+  max-width: 1000px;
   background: #131639;
   border-radius: 10px;
 }
@@ -129,4 +153,121 @@ section {
 
 .asset-list td.negative {
   color: #fc8181;
+}
+
+.info-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #0e0e33, #18194c);
+  border-radius: 16px;
+  margin-top: 4rem;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+.info-card {
+  background: #1a1d4d;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #cbd5e0;
+  max-width: 280px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 1rem 0 0.5rem;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.info-card img {
+  max-width: 50px;
+  margin-bottom: 1rem;
+}
+
+/* Alerts Section */
+.alerts-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #10142f;
+  color: #fff;
+}
+
+.alerts-section h2 {
+  font-size: 2rem;
+  color: #7fdbff;
+}
+
+.alerts-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.alert-card {
+  padding: 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.alert-card.yellow {
+  background-color: #ffd54f;
+  color: #333;
+}
+.alert-card.violet {
+  background-color: #9b59b6;
+  color: #fff;
+}
+.alert-card.blue {
+  background-color: #3498db;
+  color: #fff;
+}
+.alert-card.orange {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+/* Pricing Section */
+.pricing-section {
+  padding: 4rem 2rem;
+  background: #0f102d;
+  color: #fff;
+  text-align: center;
+}
+
+.pricing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pricing-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-value h3 {
+  font-size: 2.5rem;
+  color: #7fdbff;
 }
