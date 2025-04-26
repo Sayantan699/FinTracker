@@ -1,168 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FinTrackr - Crypto Portfolio Tracker</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">FINTRACKR</div>
-    <ul class="nav-links">
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Insights</a></li>
-      <li><a href="#">Settings</a></li>
-      <li><a href="#">Login 🔍</a></li>
-    </ul>
-  </header>
-
-  <section class="hero">
-    <h1>Track. Grow. Master your <span>Crypto Portfolio.</span></h1>
-    <button class="cta-btn">Start Tracking Free</button>
-    <div class="features">
-      <div>📈 Live Portfolio Tracking</div>
-      <div>📃 Real-time P&L Reports</div>
-      <div>🔄 Auto Sync from Wallets</div>
-      <div>🔐 Secure & Private</div>
-    </div>
-  </section>
-
-  <section class="add-asset">
-    <h2>Add Asset</h2>
-    <form id="assetForm">
-      <select name="crypto" required>
-        <option value="">Select Crypto</option>
-        <option value="BTC">BTC</option>
-        <option value="ETH">ETH</option>
-        <option value="ENB">ENB</option>
-        <option value="XRP">XRP</option>
-        <option value="ADA">ADA</option>
-      </select>
-      <input type="number" name="price" placeholder="Purchase Price (USD)" required />
-      <input type="number" name="amount" placeholder="Amount Purchased" required />
-      <input type="date" name="date" required />
-      <button type="submit">Add Asset</button>
-    </form>
-  </section>
-
-  <section class="asset-list">
-    <h2>Asset List</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Symbol</th>
-          <th>Amount</th>
-          <th>Cost (USD)</th>
-          <th>Current Price</th>
-          <th>Current Value</th>
-          <th>P/L (%)</th>
-        </tr>
-      </thead>
-      <tbody id="assetTable"></tbody>
-    </table>
-  </section>
-
-  <section class="info-section">
-    <h2>Track your portfolio and optimize your holdings</h2>
-    <div class="info-grid">
-      <div class="info-card">
-        <img src="rocket.png" alt="Rocket Icon" />
-        <h3>Daily snapshots</h3>
-        <p>View your recent portfolio changes, spot trends, and anticipate market movements</p>
-      </div>
-      <div class="info-card">
-        <img src="laptop.png" alt="Laptop Icon" />
-        <h3>Auto-categorization</h3>
-        <p>Our smart algorithms classify your cryptocurrency holdings by type</p>
-      </div>
-      <div class="info-card">
-        <img src="chart-green.png" alt="Rollover Icon" />
-        <h3>Rollover insights</h3>
-        <p>Set strategies for carrying forward unallocated balances month-to-month</p>
-      </div>
-      <div class="info-card">
-        <img src="bars.png" alt="Cashflow Icon" />
-        <h3>Cash flow</h3>
-        <p>Get a clear overview of your income and expenses with visual summaries</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="alerts-section">
-    <h2>Gain peace of mind</h2>
-    <p>Smart monitoring helps keep track of your investment with alerts that keep you informed</p>
-    <div class="alerts-grid">
-      <div class="alert-card yellow">📉 Track price changes</div>
-      <div class="alert-card violet">🎯 Set price targets</div>
-      <div class="alert-card yellow">🔔 Alert for drops</div>
-      <div class="alert-card violet">🧿 Watch the market</div>
-      <div class="alert-card blue">➕ Watch scams fast</div>
-      <div class="alert-card orange">⚠️ Spot scams fast</div>
-      <div class="alert-card blue">🛡️ Keep funds safe</div>
-    </div>
-  </section>
-
-  <section class="pricing-section">
-    <div class="pricing-box">
-      <div class="pricing-text">
-        <h2>Straightforward and transparent pricing</h2>
-        <p>Try it free for 30 days. No hidden fees or surprises, just a simple subscription for unlimited access.</p>
-      </div>
-      <div class="pricing-value">
-        <h3>$7.92/mo</h3>
-        <p>$95 billed yearly</p>
-        <button class="cta-btn">Get Started</button>
-      </div>
-    </div>
-  </section>
-
-<footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <h3>FinTrackr</h3>
-      <p>Simplify crypto portfolio management</p>
-      <small>© Copyright 2025 FinTrackr. All rights reserved.</small>
-      <p>Made with 💜 by the FinTrackr team</p>
-    </div>
-
-    <div class="footer-buttons">
-      <button>Investment Tips →</button>
-      <button>Market News →</button>
-      <button>Get in Touch →</button>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div>
-      <h4>Features</h4>
-      <ul>
-        <li>Portfolio Tracking</li>
-        <li>Analytics</li>
-        <li>Security</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinTrackr - Crypto Portfolio Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">FINTRACKR</div>
+      <ul class="nav-links">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Insights</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login 🔍</a></li>
       </ul>
-    </div>
-    <div>
-      <h4>Useful links</h4>
-      <ul>
-        <li>Pricing</li>
-        <li>Help Center</li>
-        <li>Terms of Service</li>
-      </ul>
-    </div>
-    <div>
-      <h4>About FinTrackr</h4>
-      <ul>
-        <li>Our Mission</li>
-        <li>Blog</li>
-        <li>Careers</li>
-      </ul>
-    </div>
-  </div>
-</footer>
+    </header>
 
+    <section class="hero">
+      <h1>Track. Grow. Master your <span>Crypto Portfolio.</span></h1>
+      <button class="cta-btn">Start Tracking Free</button>
+      <div class="features">
+        <div>📈 Live Portfolio Tracking</div>
+        <div>📃 Real-time P&L Reports</div>
+        <div>🔄 Auto Sync from Wallets</div>
+        <div>🔐 Secure & Private</div>
+      </div>
+    </section>
 
-  <script src="script.js"></script>
-</body>
+    <section class="add-asset">
+      <h2>Add Asset</h2>
+      <form id="assetForm">
+        <select name="crypto" required>
+          <option value="">Select Crypto</option>
+          <option value="BTC">BTC</option>
+          <option value="ETH">ETH</option>
+          <option value="ENB">ENB</option>
+          <option value="XRP">XRP</option>
+          <option value="ADA">ADA</option>
+        </select>
+        <input
+          type="number"
+          name="price"
+          placeholder="Purchase Price (USD)"
+          required
+        />
+        <input
+          type="number"
+          name="amount"
+          placeholder="Amount Purchased"
+          required
+        />
+        <input type="date" name="date" required />
+        <button type="submit">Add Asset</button>
+      </form>
+    </section>
+
+    <section class="asset-list">
+      <h2>Asset List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Amount</th>
+            <th>Cost (USD)</th>
+            <th>Current Price</th>
+            <th>Current Value</th>
+            <th>P/L (%)</th>
+          </tr>
+        </thead>
+        <tbody id="assetTable"></tbody>
+      </table>
+    </section>
+
+    <section class="info-section">
+      <h2>Track your portfolio and optimize your holdings</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <img src="./utils/rocket.png" alt="Rocket Icon" />
+          <h3>Daily snapshots</h3>
+          <p>
+            View your recent portfolio changes, spot trends, and anticipate
+            market movements
+          </p>
+        </div>
+        <div class="info-card">
+          <img src="./utils/laptop.png" alt="Laptop Icon" />
+          <h3>Auto-categorization</h3>
+          <p>
+            Our smart algorithms classify your cryptocurrency holdings by type
+          </p>
+        </div>
+        <div class="info-card">
+          <img src="./utils/chart-green.png" alt="Rollover Icon" />
+          <h3>Rollover insights</h3>
+          <p>
+            Set strategies for carrying forward unallocated balances
+            month-to-month
+          </p>
+        </div>
+        <div class="info-card">
+          <img src="./utils/bars.png" alt="Cashflow Icon" />
+          <h3>Cash flow</h3>
+          <p>
+            Get a clear overview of your income and expenses with visual
+            summaries
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="alerts-section">
+      <h2>Gain peace of mind</h2>
+      <p>
+        Smart monitoring helps keep track of your investment with alerts that
+        keep you informed
+      </p>
+      <div class="alerts-grid">
+        <div class="alert-card yellow">📉 Track price changes</div>
+        <div class="alert-card violet">🎯 Set price targets</div>
+        <div class="alert-card yellow">🔔 Alert for drops</div>
+        <div class="alert-card violet">🧿 Watch the market</div>
+        <div class="alert-card blue">➕ Watch scams fast</div>
+        <div class="alert-card orange">⚠️ Spot scams fast</div>
+        <div class="alert-card blue">🛡️ Keep funds safe</div>
+      </div>
+    </section>
+
+    <section class="pricing-section">
+      <div class="pricing-box">
+        <div class="pricing-text">
+          <h2>Straightforward and transparent pricing</h2>
+          <p>
+            Try it free for 30 days. No hidden fees or surprises, just a simple
+            subscription for unlimited access.
+          </p>
+        </div>
+        <div class="pricing-value">
+          <h3>$7.92/mo</h3>
+          <p>$95 billed yearly</p>
+          <button class="cta-btn">Get Started</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <section class="contact">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h3>FinTrackr</h3>
+            <p>Simplify crypto portfolio management</p>
+          </div>
+
+          <div class="footer-bottom">
+            <div>
+              <h4>Features</h4>
+              <ul>
+                <li>Portfolio Tracking</li>
+                <li>Analytics</li>
+                <li>Security</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-buttons">
+            <button>Investment Tips →</button>
+            <button>Market News →</button>
+            <button>Get in Touch →</button>
+          </div>
+
+          <div class="up">
+            <a href="#header" style="text-decoration: none"
+              ><div class="up-box">
+                <i class="fa-solid fa-angle-up up-icon"></i></div
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-down" style="position: relative; top: 80px">
+          <div class="footer-down-content">
+            <small>© Copyright 2025 FinTrackr. All rights reserved.</small>
+            <hr />
+            <p>Made with 💜 by the FinTrackr team</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script src="./src/script.js"></script>
+  </body>
 </html>
