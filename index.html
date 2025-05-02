@@ -12,59 +12,136 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- AOS Animation Library -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        height: 200vh;
+        margin: 0;
+      }
+
+      /* Scrollbar styles */
+      ::-webkit-scrollbar {
+        width: 12px; /* Width of the scrollbar */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #0077ff; /* Scrollbar thumb color */
+        border-radius: 6px; /* Rounded corners */
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #0077ff; /* Color on hover */
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: #ecf0f1; /* Scrollbar track color */
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   </head>
+
   <body>
+    <div id="particles-js" style="z-index: -1"></div>
     <header id="header">
-      <div class="logo">FINTRACKR</div>
+      <div class="logo">
+        <h2>Fin<span class="highlight">Trackr</span></h2>
+      </div>
       <ul class="nav-links">
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
         <li><a href="#">Insights</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="Login.html">Login 🔍</a></li>
       </ul>
+
+      <a href="Login.html" class="loginbutton">Login/Register</a>
     </header>
 
-    <section class="hero">
-      <h1>Track. Grow. Master your <span>Crypto Portfolio.</span></h1>
-      <button class="cta-btn">Start Tracking Free</button>
-      <div class="features">
-        <div>📈 Live Portfolio Tracking</div>
-        <div>📃 Real-time P&L Reports</div>
-        <div>🔄 Auto Sync from Wallets</div>
-        <div>🔐 Secure & Private</div>
+    <!-- Hero Section -->
+    <section
+      class="hero"
+      id="home"
+      data-aos="fade-up"
+      style="background: transparent; margin-top: 130px"
+    >
+      <h1>FinTrackr</h1>
+      <p class="typing-text" style="font-size: 40px; font-weight: 600">
+        <span style="font-size: 45px"></span> your Crypto Portfolio.
+      </p>
+      <button class="cta-btn">Get Started</button>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" data-aos="fade-up" style="margin-bottom: 250px">
+      <div class="features-grid">
+        <div class="feature" style="height: 200px; width: 300px">
+          <i class="fas fa-stopwatch"></i>
+          <h3>Live Portfolio Tracking</h3>
+        </div>
+        <div class="feature" style="height: 200px; width: 300px">
+          <i class="fas fa-cogs"></i>
+          <h3>Real-time P&L Reports</h3>
+        </div>
+        <div class="feature" style="height: 200px; width: 300px">
+          <i class="fa-solid fa-lock"></i>
+          <h3>Secure & Private</h3>
+        </div>
       </div>
     </section>
 
-    <section class="add-asset">
+    <section
+      id="asset-section"
+      class="add-asset"
+      style="border: 1px solid white"
+    >
       <h2>Add Asset</h2>
-      <form id="assetForm">
-        <select name="crypto" required>
-          <option value="">Select Crypto</option>
-          <option value="BTC">BTC</option>
-          <option value="ETH">ETH</option>
-          <option value="ENB">ENB</option>
-          <option value="XRP">XRP</option>
-          <option value="ADA">ADA</option>
-        </select>
-        <input
-          type="number"
-          name="price"
-          placeholder="Purchase Price (USD)"
-          required
-        />
-        <input
-          type="number"
-          name="amount"
-          placeholder="Amount Purchased"
-          required
-        />
-        <input type="date" name="date" required />
-        <button type="submit">Add Asset</button>
-      </form>
+
+      <div>
+        <form id="assetForm">
+          <select name="crypto" required>
+            <option value="">Select Crypto</option>
+            <option value="BTC">BTC</option>
+            <option value="ETH">ETH</option>
+            <option value="ENB">ENB</option>
+            <option value="XRP">XRP</option>
+            <option value="ADA">ADA</option>
+          </select>
+          <input
+            type="number"
+            name="price"
+            placeholder="Purchase Price (USD)"
+            required
+          />
+          <input
+            type="number"
+            name="amount"
+            placeholder="Amount Purchased"
+            required
+          />
+          <input type="date" name="date" required />
+          <button type="submit">Add Asset</button>
+        </form>
+      </div>
     </section>
 
-    <section class="asset-list">
+    <section id="asset-list-section" class="asset-list">
       <h2>Asset List</h2>
       <table>
         <thead>
@@ -81,7 +158,7 @@
       </table>
     </section>
 
-    <section class="info-section">
+    <section class="info-section" style="margin-bottom: 160px">
       <h2>Track your portfolio and optimize your holdings</h2>
       <div class="info-grid">
         <div class="info-card">
@@ -118,9 +195,19 @@
       </div>
     </section>
 
-    <section class="alerts-section">
-      <h2>Gain peace of mind</h2>
-      <p>
+    <section
+      class="alerts-section"
+      style="background-color: transparent; margin-bottom: 60px"
+    >
+      <h2 style="margin-bottom: 30px">Gain peace of mind</h2>
+      <p
+        style="
+          font-family: cursive;
+          font-size: 0.95rem;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        "
+      >
         Smart monitoring helps keep track of your investment with alerts that
         keep you informed
       </p>
@@ -135,7 +222,7 @@
       </div>
     </section>
 
-    <section class="pricing-section">
+    <!--<section class="pricing-section">
       <div class="pricing-box">
         <div class="pricing-text">
           <h2>Straightforward and transparent pricing</h2>
@@ -150,51 +237,107 @@
           <button class="cta-btn">Get Started</button>
         </div>
       </div>
-    </section>
+    </section>-->
 
-    <footer>
-      <section class="contact">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <h3>FinTrackr</h3>
-            <p>Simplify crypto portfolio management</p>
-          </div>
-
-          <div class="footer-bottom">
-            <div>
-              <h4>Features</h4>
-              <ul>
-                <li>Portfolio Tracking</li>
-                <li>Analytics</li>
-                <li>Security</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="footer-buttons">
-            <button>Investment Tips →</button>
-            <button>Market News →</button>
-            <button>Get in Touch →</button>
-          </div>
-
-          <div class="up">
-            <a href="#header" style="text-decoration: none"
-              ><div class="up-box">
-                <i class="fa-solid fa-angle-up up-icon"></i></div
-            ></a>
+    <footer style="background-color: rgba(21, 20, 20, 0.7)">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>FinTrackr</h3>
+          <p>Simplify crypto portfolio management</p>
+        </div>
+        <div class="footer-section links">
+          <h4>Links</h4>
+          <a href="#home">Home</a>
+          <a href="#services">Profile</a>
+          <a href="#portfolio">Insights</a>
+          <a href="#pricing">Contact</a>
+        </div>
+        <div class="footer-section links">
+          <div>
+            <h4>Features</h4>
+            <ul style="list-style-type: none" class="featureslist">
+              <li>Portfolio Tracking</li>
+              <li>Analytics</li>
+              <li>Security</li>
+            </ul>
           </div>
         </div>
-
-        <div class="footer-down" style="position: relative; top: 80px">
-          <div class="footer-down-content">
-            <small>© Copyright 2025 FinTrackr. All rights reserved.</small>
-            <hr />
-            <p>Made with 💜 by the FinTrackr team</p>
-          </div>
+        <div class="footer-buttons">
+          <button>Investment Tips →</button>
+          <button>Market News →</button>
+          <button>Get in Touch →</button>
         </div>
-      </section>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 FinTrackr. All rights reserved.</p>
+        <hr class="footer-line" />
+        <p>Made with 💜 by the FinTrackr team</p>
+      </div>
     </footer>
 
     <script src="./src/script.js"></script>
+
+    <!-- AOS Animation Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 40,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#c4d7f2",
+          },
+          shape: {
+            type: "circle",
+          },
+          opacity: {
+            value: 0.5,
+          },
+          size: {
+            value: 3,
+          },
+          move: {
+            enable: true,
+            speed: 1,
+          },
+        },
+      });
+    </script>
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var portfolioSwiper = new Swiper(".portfolio-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+      });
+
+      var pricingSwiper = new Swiper(".pricing-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+      });
+    </script>
   </body>
 </html>
