@@ -1,343 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FinTrackr - Crypto Portfolio Tracker</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- AOS Animation Library -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+  <title>GrowBroAi | AI-Powered Content Creation, UI/UX Design, Automation Services</title>
+  <meta name="description" content="GrowBroAi offers AI-powered services including content creation, UI/UX design, automation setups, and more to supercharge your business growth.">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome for Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
 
-    <style>
-      body {
-        height: 200vh;
-        margin: 0;
-      }
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-      /* Scrollbar styles */
-      ::-webkit-scrollbar {
-        width: 12px; /* Width of the scrollbar */
-      }
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-      ::-webkit-scrollbar-thumb {
-        background-color: #0077ff; /* Scrollbar thumb color */
-        border-radius: 6px; /* Rounded corners */
-      }
 
-      ::-webkit-scrollbar-thumb:hover {
-        background-color: #0077ff; /* Color on hover */
-      }
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
-      ::-webkit-scrollbar-track {
-        background-color: #ecf0f1; /* Scrollbar track color */
-      }
-    </style>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  </head>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
 
-  <body>
-    <div id="particles-js" style="z-index: -1"></div>
-    <header id="header">
-      <div class="logo">
-        <h2>Fin<span class="highlight">Trackr</span></h2>
+
+<body>
+  <div id="particles-js"></div>
+
+  <header id="navbar">
+    <div class="logo">
+      <h2>GrowBro<span class="highlight">Ai</span></h2>
+    </div>
+    <button id="menu-toggle" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav id="nav-links" class="collapsed">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <button class="login-btn" onclick="location.href='login.html'">Login</button>
+    </nav>
+  </header>
+  
+  <hr style="border: none; height: 1px; background: #ccc; width: 100%;">
+
+  <!-- Hero Section -->
+  <section class="hero" id="home" data-aos="fade-up">
+    <h1>GrowBroAi</h1>
+    <p>AI-powered services to supercharge your business growth</p>
+    <button class="cta-btn">Explore Services</button>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" data-aos="fade-up">
+    <div class="features-grid">
+      <div class="feature">
+        <i class="fas fa-stopwatch"></i>
+        <h3>Delivered in 24 Hours</h3>
       </div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Insights</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-
-      <a href="Login.html" class="loginbutton">Login/Register</a>
-    </header>
-
-    <!-- Hero Section -->
-    <section
-      class="hero"
-      id="home"
-      data-aos="fade-up"
-      style="background: transparent; margin-top: 130px"
-    >
-      <h1>FinTrackr</h1>
-      <p class="typing-text" style="font-size: 40px; font-weight: 600">
-        <span style="font-size: 45px"></span> your Crypto Portfolio.
-      </p>
-      <button class="cta-btn">Get Started</button>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" data-aos="fade-up" style="margin-bottom: 250px">
-      <div class="features-grid">
-        <div class="feature" style="height: 200px; width: 300px">
-          <i class="fas fa-stopwatch"></i>
-          <h3>Live Portfolio Tracking</h3>
-        </div>
-        <div class="feature" style="height: 200px; width: 300px">
-          <i class="fas fa-cogs"></i>
-          <h3>Real-time P&L Reports</h3>
-        </div>
-        <div class="feature" style="height: 200px; width: 300px">
-          <i class="fa-solid fa-lock"></i>
-          <h3>Secure & Private</h3>
-        </div>
+      <div class="feature">
+        <i class="fas fa-cogs"></i>
+        <h3>Backed by AI Expertise</h3>
       </div>
-    </section>
-
-    <section
-      id="asset-section"
-      class="add-asset"
-      style="border: 1px solid white"
-    >
-      <h2>Add Asset</h2>
-
-      <div>
-        <form id="assetForm">
-          <select name="crypto" required>
-            <option value="">Select Crypto</option>
-            <option value="BTC">BTC</option>
-            <option value="ETH">ETH</option>
-            <option value="ENB">ENB</option>
-            <option value="XRP">XRP</option>
-            <option value="ADA">ADA</option>
-          </select>
-          <input
-            type="number"
-            name="price"
-            placeholder="Purchase Price (USD)"
-            required
-          />
-          <input
-            type="number"
-            name="amount"
-            placeholder="Amount Purchased"
-            required
-          />
-          <input type="date" name="date" required />
-          <button type="submit">Add Asset</button>
-        </form>
+      <div class="feature">
+        <i class="fas fa-dollar-sign"></i>
+        <h3>Low Cost and Efficient</h3>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="asset-list-section" class="asset-list">
-      <h2>Asset List</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Symbol</th>
-            <th>Amount</th>
-            <th>Cost (USD)</th>
-            <th>Current Price</th>
-            <th>Current Value</th>
-            <th>P/L (%)</th>
-          </tr>
-        </thead>
-        <tbody id="assetTable"></tbody>
-      </table>
-    </section>
-
-    <section class="info-section" style="margin-bottom: 160px">
-      <h2>Track your portfolio and optimize your holdings</h2>
-      <div class="info-grid">
-        <div class="info-card">
-          <img src="./utils/rocket.png" alt="Rocket Icon" />
-          <h3>Daily snapshots</h3>
-          <p>
-            View your recent portfolio changes, spot trends, and anticipate
-            market movements
-          </p>
-        </div>
-        <div class="info-card">
-          <img src="./utils/laptop.png" alt="Laptop Icon" />
-          <h3>Auto-categorization</h3>
-          <p>
-            Our smart algorithms classify your cryptocurrency holdings by type
-          </p>
-        </div>
-        <div class="info-card">
-          <img src="./utils/chart-green.png" alt="Rollover Icon" />
-          <h3>Rollover insights</h3>
-          <p>
-            Set strategies for carrying forward unallocated balances
-            month-to-month
-          </p>
-        </div>
-        <div class="info-card">
-          <img src="./utils/bars.png" alt="Cashflow Icon" />
-          <h3>Cash flow</h3>
-          <p>
-            Get a clear overview of your income and expenses with visual
-            summaries
-          </p>
-        </div>
+  <!-- Services Section -->
+  <section class="services" id="services" data-aos="fade-up" data-aos-duration="1200">
+    <h2>Services We Provide</h2>
+    <br>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-pen-nib"></i>
+        <h3>Content Creation</h3>
+        <p>Blogs, social media posts, newsletters, and more.</p>
       </div>
-    </section>
-
-    <section
-      class="alerts-section"
-      style="background-color: transparent; margin-bottom: 60px"
-    >
-      <h2 style="margin-bottom: 30px">Gain peace of mind</h2>
-      <p
-        style="
-          font-family: cursive;
-          font-size: 0.95rem;
-          line-height: 1.5;
-          margin-bottom: 20px;
-        "
-      >
-        Smart monitoring helps keep track of your investment with alerts that
-        keep you informed
-      </p>
-      <div class="alerts-grid">
-        <div class="alert-card yellow">📉 Track price changes</div>
-        <div class="alert-card violet">🎯 Set price targets</div>
-        <div class="alert-card yellow">🔔 Alert for drops</div>
-        <div class="alert-card violet">🧿 Watch the market</div>
-        <div class="alert-card blue">➕ Watch scams fast</div>
-        <div class="alert-card orange">⚠️ Spot scams fast</div>
-        <div class="alert-card blue">🛡️ Keep funds safe</div>
+      <div class="service-card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Design & Development</h3>
+        <p>Modern UI/UX design, website development, branding.</p>
       </div>
-    </section>
+      <div class="service-card">
+        <i class="fas fa-robot"></i>
+        <h3>Automation</h3>
+        <p>Automation for Instagram, YouTube, and Gmail.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Tech Odd Jobs</h3>
+        <p>PPTs, visualizations, AI photo mockups and more.</p>
+      </div>
+    </div>
+  </section>
 
-    <!--<section class="pricing-section">
-      <div class="pricing-box">
-        <div class="pricing-text">
-          <h2>Straightforward and transparent pricing</h2>
-          <p>
-            Try it free for 30 days. No hidden fees or surprises, just a simple
-            subscription for unlimited access.
-          </p>
-        </div>
-        <div class="pricing-value">
-          <h3>$7.92/mo</h3>
-          <p>$95 billed yearly</p>
-          <button class="cta-btn">Get Started</button>
+  <!-- Portfolio Section -->
+<section class="portfolio" id="portfolio" data-aos="fade-up">
+  <h2>Portfolio</h2>
+  <div class="swiper portfolio-swiper">
+    <div class="swiper-wrapper">
+      
+      <!-- Slide 1 -->
+      <div class="swiper-slide portfolio-card">
+        <h3>Content Creation</h3>
+        <img src="content-creation-sample.jpg" alt="Content Creation Sample">
+        <p>Sample projects showcasing blogs and social media content.</p>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide portfolio-card">
+        <h3>UI/UX Design</h3>
+        <img src="uiux-design-sample.jpg" alt="UI/UX Design Sample">
+        <p>Modern, responsive web designs for startups and businesses.</p>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide portfolio-card">
+        <h3>Automation Setup</h3>
+        <img src="automation-sample.jpg" alt="Automation Setup Sample">
+        <p>Automation for Instagram, YouTube, Gmail and more.</p>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide portfolio-card">
+        <h3>Branding Package</h3>
+        <img src="branding-sample.jpg" alt="Branding Package Sample">
+        <p>Full brand identity design for startups and creators.</p>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="swiper-slide portfolio-card">
+        <h3>Business Presentation</h3>
+        <img src="business-presentation-sample.jpg" alt="Business Presentation Sample">
+        <p>Professional PPTs and visual storytelling for businesses.</p>
+      </div>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+
+    </div>
+    <!-- Navigation Buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+
+  
+
+
+  <!-- Customer Reviews -->
+  <section class="reviews" id="reviews" data-aos="fade-up">
+    <h2>What Our Customers Say</h2>
+    <br>
+    <div class="reviews-grid">
+      <div class="review">
+        <p>"Top-notch articles! Audience engagement boosted!"</p>
+        <h4>Rachel - Content Creation</h4>
+      </div>
+      <div class="review">
+        <p>"Exactly what I envisioned. Nailed the UX!"</p>
+        <h4>Wan - UI/UX Design</h4>
+      </div>
+      <div class="review">
+        <p>"Super impressive landing page. Would recommend!"</p>
+        <h4>Lauren - UI/UX Design</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>GrowBroAi</h3>
+        <p>AI-boosted services tailored for your daily growth.</p>
+      </div>
+      <div class="footer-section links">
+        <h4>Links</h4>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="footer-section contact">
+        <h4>Contact</h4>
+        <p>Email: support@growbroai.com</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
-    </section>-->
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 GrowBroAi. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <footer style="background-color: rgba(21, 20, 20, 0.7)">
-      <div class="footer-content">
-        <div class="footer-section about">
-          <h3>FinTrackr</h3>
-          <p>Simplify crypto portfolio management</p>
-        </div>
-        <div class="footer-section links">
-          <h4>Links</h4>
-          <a href="#home">Home</a>
-          <a href="#services">Profile</a>
-          <a href="#portfolio">Insights</a>
-          <a href="#pricing">Contact</a>
-        </div>
-        <div class="footer-section links">
-          <div>
-            <h4>Features</h4>
-            <ul style="list-style-type: none" class="featureslist">
-              <li>Portfolio Tracking</li>
-              <li>Analytics</li>
-              <li>Security</li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-buttons">
-          <button>Investment Tips →</button>
-          <button>Market News →</button>
-          <button>Get in Touch →</button>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 FinTrackr. All rights reserved.</p>
-        <hr class="footer-line" />
-        <p>Made with 💜 by the FinTrackr team</p>
-      </div>
-    </footer>
+  <!-- AOS Animation Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 
-    <script src="./src/script.js"></script>
-
-    <!-- AOS Animation Script -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-    </script>
-
-    <script>
-      particlesJS("particles-js", {
-        particles: {
-          number: {
-            value: 40,
-            density: {
-              enable: true,
-              value_area: 800,
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 40,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
             },
-          },
-          color: {
-            value: "#c4d7f2",
-          },
-          shape: {
-            type: "circle",
-          },
-          opacity: {
-            value: 0.5,
-          },
-          size: {
-            value: 3,
-          },
-          move: {
-            enable: true,
-            speed: 1,
-          },
-        },
-      });
+            "color": {
+                "value": "#c4d7f2"
+            },
+            "shape": {
+                "type": "circle"
+            },
+            "opacity": {
+                "value": 0.5
+            },
+            "size": {
+                "value": 3
+            },
+            "move": {
+                "enable": true,
+                "speed": 1
+            }
+        }
+    });
     </script>
     <!-- SwiperJS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script>
-      var portfolioSwiper = new Swiper(".portfolio-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        loop: true,
-      });
+<script>
+  var portfolioSwiper = new Swiper('.portfolio-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    loop: true,
+  });
 
-      var pricingSwiper = new Swiper(".pricing-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        loop: true,
-      });
-    </script>
-  </body>
+  var pricingSwiper = new Swiper('.pricing-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    loop: true,
+  });
+</script>
+
+</body>
 </html>
