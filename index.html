@@ -65,14 +65,14 @@ w<!DOCTYPE html>
         <h2>Fin<span class="highlight">Trackr</span></h2>
       </div>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <a href="Profile.html">Profile</a>
-        <a href="Insights.html">Insights</a>
+        <li><a href="#home">Home</a></li>
+        <li><a href="./Routing/Profile.html">Profile</a></li>
+        <li><a href="./Routing/Insights.html">Insights</a></li>
 
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <a href="Login.html" class="loginbutton">Login/Register</a>
+      <a href="./Routing/Login.html" class="loginbutton">Login/Register</a>
     </header>
 
     <!-- Hero Section -->
@@ -86,10 +86,12 @@ w<!DOCTYPE html>
       <p class="typing-text" style="font-size: 40px; font-weight: 600">
         <span style="font-size: 45px"></span> your Crypto Portfolio.
       </p>
-      <button class="cta-btn">Get Started</button>
+      <a href="/FinTracker/FinTracker/Routing/Login.html"
+        ><button class="cta-btn">Get Started</button></a
+      >
     </section>
 
-    <!-- Features Section -->
+    <!-- --------------Features Section Starts---------- -->
     <section class="features" data-aos="fade-up" style="margin-bottom: 250px">
       <div class="features-grid">
         <div class="feature" style="height: 200px; width: 300px">
@@ -106,6 +108,9 @@ w<!DOCTYPE html>
         </div>
       </div>
     </section>
+    <!--------------Features Section Ends------------------ -->
+
+    <!-- ---------------Asset Section Starts--------------- -->
 
     <section
       id="asset-section"
@@ -144,20 +149,24 @@ w<!DOCTYPE html>
 
     <section id="asset-list-section" class="asset-list">
       <h2>Asset List</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Symbol</th>
-            <th>Amount</th>
-            <th>Cost (USD)</th>
-            <th>Current Price</th>
-            <th>Current Value</th>
-            <th>P/L (%)</th>
-          </tr>
-        </thead>
-        <tbody id="assetTable"></tbody>
-      </table>
+      <div style="overflow-x: scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Amount</th>
+              <th>Cost (USD)</th>
+              <th>Current Price</th>
+              <th>Current Value</th>
+              <th>P/L (%)</th>
+            </tr>
+          </thead>
+          <tbody id="assetTable"></tbody>
+        </table>
+      </div>
     </section>
+
+    <!-- ---------------Asset Section Ends--------------- -->
 
     <section class="info-section" style="margin-bottom: 160px">
       <h2>Track your portfolio and optimize your holdings</h2>
@@ -217,8 +226,6 @@ w<!DOCTYPE html>
         <div class="alert-card violet">🎯 Set price targets</div>
         <div class="alert-card yellow">🔔 Alert for drops</div>
         <div class="alert-card violet">🧿 Watch the market</div>
-        <div class="alert-card blue">➕ Watch scams fast</div>
-        <div class="alert-card orange">⚠️ Spot scams fast</div>
         <div class="alert-card blue">🛡️ Keep funds safe</div>
       </div>
     </section>
@@ -240,7 +247,7 @@ w<!DOCTYPE html>
       </div>
     </section>-->
 
-    <footer style="background-color: rgba(21, 20, 20, 0.7)">
+    <footer style="background-color: rgba(21, 20, 20, 0.7)" id="contact">
       <div class="footer-content">
         <div class="footer-section about">
           <h3>FinTrackr</h3>
@@ -249,9 +256,9 @@ w<!DOCTYPE html>
         <div class="footer-section links">
           <h4>Links</h4>
           <a href="#home">Home</a>
-          <a href="#services">Profile</a>
-          <a href="#portfolio">Insights</a>
-          <a href="#pricing">Contact</a>
+          <a href="./Routing/Profile.html">Profile</a>
+          <a href="./Routing/Insights.html">Insights</a>
+          <a href="#contact">Contact</a>
         </div>
         <div class="footer-section links">
           <div>
