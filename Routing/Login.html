@@ -4,13 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="./styles/Login.css" />
+    <link rel="stylesheet" href="../styles/Login.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
   </head>
   <body>
+    <header id="header">
+      <div class="logo">
+        <h2>Fin<span class="highlight">Trackr</span></h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Routing/Profile.html">Profile</a></li>
+        <li><a href="../Routing/Insights.html">Insights</a></li>
+
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+
+      <a href="#" class="loginbutton">Login/Register</a>
+    </header>
     <div class="wrapper">
       <h1>Login</h1>
       <div class="input-box">
@@ -34,6 +48,6 @@
         <p>Don't have an account? <a href="Register.html">Register</a></p>
       </div>
     </div>
-    <script type="module" src="./src/Login.js" defer></script>
+    <script type="module" src="../src/Login.js" defer></script>
   </body>
 </html>

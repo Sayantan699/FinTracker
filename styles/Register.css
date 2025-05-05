@@ -1,70 +1,131 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #0b0c2a;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("../utils/your-background.jpg") no-repeat center center/cover;
 }
 
-.wrapper{
-    width: 420px;
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    border-radius: 10px;
-    padding: 30px 40px;
+/* -------------Header CSS Starts -------------------*/
+header {
+  background: radial-gradient(circle at center, #1b226c, #0d081a);
+  width: 100%;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-.wrapper h1{
-    text-align: center;
-    font-size: 36px;
-    color: #8a68f1;
+header .logo h2 {
+  font-size: 2rem;
+  color: #fff;
 }
 
-.wrapper .input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
+.highlight {
+  color: #0077ff;
 }
 
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solig rgba(255, 255, 255, .2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px 45px 20px 20px;
+.loginbutton {
+  background: #0077ff;
+  padding: 0.5rem 1.2rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.loginbutton:hover {
+  transition: 0.2s;
+  transform: scale(1.05);
 }
 
-.input-box input::placeholder{
-    color: #fff;
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
 }
 
-.input-box i{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
+.nav-links li a {
+  color: #e0e0ff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+.nav-links li a:hover {
+  color: #0077ff;
 }
 
-.wrapper #btn{
-    width: 100%;
-    background: linear-gradient(to right, #9a70ff, #b38aff);
+/* -------------Header CSS Ends -------------------*/
+
+.wrapper {
+  width: 420px;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 5px #0077ff, 0 0 10px #0077ff, 0 0 10px #0077ff;
+}
+
+.wrapper h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #8a68f1;
+}
+
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solig rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.wrapper #btn {
+  width: 100%;
+  background: linear-gradient(to right, #9a70ff, #b38aff);
   color: white;
   padding: 0.9rem 2rem;
   border: none;
@@ -74,19 +135,18 @@ body{
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(138, 104, 241, 0.3);
   transition: all 0.2s ease-in-out;
-    /* height: 45px;
+  /* height: 45px;
     background: linear-gradient(to right, #9a70ff, #b38aff);
     border: none;
     outline: none;
     border-radius: 40px;
     font-size: 16px; 
     align-items: center; */
-    
 }
 
-.wrapper #btn:hover{
-    transform: translateY(-2px);
+.wrapper #btn:hover {
+  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(138, 104, 241, 0.5);
-    /* cursor: pointer;
+  /* cursor: pointer;
     opacity: 0.5; */
 }
