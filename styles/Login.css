@@ -176,3 +176,12 @@ header .logo h2 {
 .register-link p a.hover {
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 650px) {
+  #header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 1.5rem;
+  }
+}
