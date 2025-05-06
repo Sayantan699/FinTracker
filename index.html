@@ -73,6 +73,7 @@ w<!DOCTYPE html>
       </ul>
 
       <a href="./Routing/Login.html" class="loginbutton">Login/Register</a>
+      <!-- <i class="fa-solid fa-bars" onclick="toggleMenu()"></i> -->
     </header>
 
     <!-- Hero Section -->
@@ -347,5 +348,24 @@ w<!DOCTYPE html>
         loop: true,
       });
     </script>
+
+    <!-- <script>
+      function toggleMenu() {
+        const sidemenu = document.getElementById("nav-links");
+        const faBars = document.querySelector(".fa-bars");
+
+        sidemenu.classList.toggle("show");
+
+        if (sidemenu.classList.contains("show")) {
+          // Hide the fa-bars after 5 seconds
+          setTimeout(() => {
+            sidemenu.style.display = "none";
+          }, 5000);
+        } else {
+          // Show the fa-bars again when the menu is closed
+          sidemenu.style.display = "block";
+        }
+      }
+    </script> -->
   </body>
 </html>
