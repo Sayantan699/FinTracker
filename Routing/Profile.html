@@ -3,106 +3,201 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Crypto Portfolio</title>
-    <link rel="stylesheet" href="../styles/Profile.css" />
+    <title>FINTRACKR - Crypto Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <div class="container">
-      <aside class="sidebar">
-        <div class="logo">FINTRACKR</div>
-        <nav class="navigation">
-          <a href="#" class="active">Portfolio</a>
-          <a href="./Insights.html">Insights</a>
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-logo">
+          <h1>FINTRACKR</h1>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="#" class="sidebar-nav-item active">
+            <div class="sidebar-icon">
+              <div
+                style="
+                  width: 16px;
+                  height: 16px;
+                  border: 1px solid currentColor;
+                  border-radius: 2px;
+                "
+              ></div>
+            </div>
+            <span>Portfolio</span>
+          </a>
+          <a href="#" class="sidebar-nav-item">
+            <div class="sidebar-icon">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  height: 16px;
+                "
+              >
+                <div
+                  style="
+                    height: 2px;
+                    width: 16px;
+                    background-color: currentColor;
+                  "
+                ></div>
+                <div
+                  style="
+                    height: 2px;
+                    width: 16px;
+                    background-color: currentColor;
+                  "
+                ></div>
+                <div
+                  style="
+                    height: 2px;
+                    width: 16px;
+                    background-color: currentColor;
+                  "
+                ></div>
+              </div>
+            </div>
+            <span>Insights</span>
+          </a>
         </nav>
-      </aside>
-      <main class="main-content">
-        <header class="portfolio-header">
-          <h1>My Crypto Portfolio</h1>
-        </header>
-        <p class="flex">
-        <section class="portfolio-overview">
-          <div class="portfolio-value-card">
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h1>My Crypto Portfolio</h1>
+
+        <div class="grid">
+          <!-- Portfolio Value -->
+          <div class="card portfolio-value">
             <div class="card-title">Portfolio Value</div>
-            <div class="card-value">$52,480.15</div>
-            <div class="card-change">
-              +$1,230.75 <span class="positive">+2.40%</span>
-            </div>
+            <div class="portfolio-value-amount">$51,642.25</div>
+            <div class="positive-change">+$1,245.23 +2.47%</div>
           </div>
-          <!-- <div class="portfolio-performance-card">
+
+          <!-- Portfolio Chart -->
+          <!-- <div class="card portfolio-chart">
             <div class="card-title">Portfolio Performance</div>
-            <div class="performance-chart">
-              <img src="placeholder-chart.png" alt="Performance Chart" />
+            <div class="chart-container">
+              <div class="chart-area">
+                <div class="chart-line"></div>
+              </div>
             </div>
-            <div class="chart-controls">
-              <button class="active">1D</button>
-              <button>1W</button>
-              <button>1M</button>
+            <div class="time-filters">
+              <div class="time-filter">1D</div>
+              <div class="time-filter active">1W</div>
+              <div class="time-filter">1M</div>
             </div>
           </div> -->
-        </section>
-        <section class="asset-allocation">
-          <div class="card">
+
+          <!-- Asset Allocation -->
+          <div class="card asset-allocation">
             <div class="card-title">Asset Allocation</div>
-            <div class="allocation">
-              <div class="allocation-chart">
-                <img
-                  src="placeholder-pie-chart.png"
-                  alt="Asset Allocation Chart"
-                />
+            <div class="pie-chart"></div>
+            <div class="allocation-legend">
+              <div class="allocation-item">
+                <div class="allocation-color allocation-btc"></div>
+                <span>BTC</span>
               </div>
-              <ul class="allocation-legend">
-                <li><span class="btc"></span> BTC</li>
-                <li><span class="eth"></span> ETH</li>
-                <li><span class="enb"></span> ENB</li>
-                <li><span class="xrp"></span> XRP</li>
-                <li><span class="ada"></span> ADA</li>
-              </ul>
+              <div class="allocation-item">
+                <div class="allocation-color allocation-eth"></div>
+                <span>ETH</span>
+              </div>
+              <div class="allocation-item">
+                <div class="allocation-color allocation-ada"></div>
+                <span>ADA</span>
+              </div>
             </div>
           </div>
-        </section>
-        <section class="asset-list-section">
-          <div class="card">
+
+          <!-- Asset List -->
+          <div class="card asset-list">
             <div class="card-title">Asset List</div>
-            <ul class="asset-list">
-              <li class="asset-item">
-                <div class="asset-name">Asset</div>
-                <div class="asset-holdings">Holdings</div>
-                <div class="asset-value positive">Value</div>
-              </li>
-              <li class="asset-item">
-                <div class="asset-name"><span class="btc-icon"></span> BTC</div>
-                <div class="asset-holdings">$37,580</div>
-                <div class="asset-value positive">+2.4%</div>
-              </li>
-              <li class="asset-item">
-                <div class="asset-name"><span class="eth-icon"></span> ETH</div>
-                <div class="asset-holdings">3,749.59</div>
-                <div class="asset-value positive">+3.4%</div>
-              </li>
-              <li class="asset-item">
-                <div class="asset-name"><span class="ada-icon"></span> ADA</div>
-                <div class="asset-holdings">55,418.20</div>
-                <div class="asset-value positive">+5.4%</div>
-              </li>
-            </ul>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Asset</th>
+                  <th>Holdings</th>
+                  <th style="text-align: right">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center">
+                      <div class="asset-icon" style="background-color: #f7931a">
+                        <span>B</span>
+                      </div>
+                      <span>BTC</span>
+                    </div>
+                  </td>
+                  <td>0.75</td>
+                  <td style="text-align: right">
+                    <span>$28,531</span>
+                    <span class="asset-change positive-change">+1.2%</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center">
+                      <div class="asset-icon" style="background-color: #6b70fd">
+                        <span>E</span>
+                      </div>
+                      <span>ETH</span>
+                    </div>
+                  </td>
+                  <td>7.25</td>
+                  <td style="text-align: right">
+                    <span>$15,472</span>
+                    <span class="asset-change positive-change">+2.8%</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center">
+                      <div class="asset-icon" style="background-color: #9664f0">
+                        <span>A</span>
+                      </div>
+                      <span>ADA</span>
+                    </div>
+                  </td>
+                  <td>4,250</td>
+                  <td style="text-align: right">
+                    <span>$7,639</span>
+                    <span class="asset-change negative-change">-0.5%</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </section>
 
-        <section class="trade-info">
-          <div class="card">
-            
-            <div class="trade-item">
-              <span class="trade-type buy">Buy</span> 0.25
-              <span class="coin-symbol"></span> $7,43.21
+          <!-- Transaction Panel -->
+          <div class="card transaction-panel">
+            <div class="transaction-header">
+              <div class="card-title">Asset</div>
+              <div class="card-title">Price</div>
             </div>
-            <div class="trade-item">
-              <span class="trade-type sell">Sell</span> ADA $53.26
+
+            <div class="transaction-header">
+              <div class="transaction-type">
+                <div class="transaction-button active">Buy</div>
+                <div class="transaction-divider">•</div>
+                <div class="transaction-button">Sell</div>
+              </div>
+              <div>$743.21</div>
+            </div>
+
+            <div class="transaction-footer">
+              <div style="display: flex; align-items: center">
+                <div style="font-weight: 500; margin-right: 0.5rem">0.25</div>
+                <div style="color: #9ca3af">BTC</div>
+              </div>
             </div>
           </div>
-        </section>
-      </main>
-
-    </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
